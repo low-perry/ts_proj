@@ -24,3 +24,5 @@ The pages , components and types go into the following directories:
 ### Components
 
 ### Pages
+- [Homepage](frontend/src/pages/Homepage.tsx) , is the homepage of the app
+- [ProductPage](frontend/src/pages/ProductPage.tsx), is the page for the individual products
