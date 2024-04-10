@@ -6,3 +6,10 @@ The pages , components and types go into the following directories:
 - [pages](frontend\src\pages)
 - [components](frontend/src/components)
 - [types](frontend/src/types)
+
+### Types
+- [Product](frontend/src/types/Product.ts) represents a product entity.
+
+### Components
+
+### Pages
