@@ -6,6 +6,9 @@ Using [vite](https://vitejs.dev/guide/) and react with typescript  for the front
 Using [React-Bootstrap](https://react-bootstrap.github.io/docs/getting-started/introduction)
 `npm install react-bootstrap bootstrap`
 
+Using [React Router](https://reactrouter.com/en/main/start/overview) for client side routing
+`npm i react-router-dom`
+
 
 
 ## Development
