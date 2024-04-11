@@ -26,17 +26,18 @@ The pages , components and types go into the following directories:
 
 At [Homepage.tsx](frontend/src/pages/Homfrontendepage.tsx) define the following types:
 
-        ```typescript
-        type State = {
-                products : Product[],
-                loading: boolean,
-                error: string
+```typescript
+type State = {
+        products : Product[],
+        loading: boolean,
+        error: string
         }
 
-        type Action = {type: 'FETCH_REQUEST'} 
-                | {type: 'FETCH_SUCCESS'; payload: string}
-                | {type: 'FETCH_FAIL'; payload: string}
-        ```
+type Action = {type: 'FETCH_REQUEST'} 
+        | {type: 'FETCH_SUCCESS'; payload: string}
+        | {type: 'FETCH_FAIL'; payload: string}
+```
+        
         `State` is used to represent the state of the Homepage <br>
         `Action` represents an action that can be dispatched in a Redux application
         Both serve as parameters for the reducer function.
