@@ -1,5 +1,4 @@
 import { Col, Row } from "react-bootstrap";
-import { initialProducts } from "../data";
 import { Link } from "react-router-dom";
 import { Product } from "../types/Product";
 import { useEffect, useReducer } from "react";
