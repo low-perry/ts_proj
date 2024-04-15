@@ -15,14 +15,22 @@ Using [axios](https://axios-http.com/docs/intro) for the http requests to the ap
         After setting the baseURL at [main.tsx](frontend/src/main.tsx) need to install
         node types via `npm i --save-dev @types/node`
 
+Using [React helmet](https://www.npmjs.com/package/react-helmet-async) for page titles
+`npm i react-helmet-async`
+
+Using [React Query](https://tanstack.com/query/latest/docs/framework/react/overview) to work with server state
+`npm i @tanstack/react-query @tanstack/react-query-devtools`
+
+
 
 
 ## Development
 
-The pages , components and types go into the following directories:
+The pages , components, types and hooks go into the following directories:
 - [pages](frontend\src\pages)
 - [components](frontend/src/components)
 - [types](frontend/src/types)
+- [hooks](frontend/src/hooks/)
 
 At [Homepage.tsx](frontend/src/pages/Homfrontendepage.tsx) define the following types:
 
@@ -44,6 +52,8 @@ type Action = {type: 'FETCH_REQUEST'}
 
 Create [utils.ts](frontend/src/utils.ts) and define `getError` function.
 
+Decided to use [React Query](https://tanstack.com/query/latest/docs/framework/react/overview) instead of axios, so it's imperative to remove all axios code used on [main.tsx](frontend/src/main.tsx) and put the code in the [apiClient.ts](frontend/src/apiClient.ts) file.
+
 
 
                 
@@ -62,6 +72,9 @@ Create [utils.ts](frontend/src/utils.ts) and define `getError` function.
 ### Pages
 - [Homepage](frontend/src/pages/Homfrontendepage.tsx) , is the homepage of the app
 - [ProductPage](frontend/src/pages/ProductPage.tsx), is the page for the individual products
+
+### Hooks
+-[productHooks](frontend/src/hooks/productHooks.ts) fetches products from the server
 
 # Backend
  1. Created directory [backend](backend).
