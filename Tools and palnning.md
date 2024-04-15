@@ -55,6 +55,8 @@ Create [utils.ts](frontend/src/utils.ts) and define `getError` function.
 ### Components
 - [LoadingBox](frontend/src/components/LoadingBox.tsx) is a loading box used while data is being fetched
 - [MessageBox](frontend/src/components/MessageBox.tsx) is a Message being displayed if a error occurs
+- [Rating](frontend/src/components/Rating.tsx) is the rating for the product
+- [ProductItem](frontend/src/components/ProductItem.tsx) represents a product item
 
 
 ### Pages

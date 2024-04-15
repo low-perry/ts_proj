@@ -7,6 +7,7 @@ import { getError } from "../utils";
 import axios from "axios";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
+import ProductItem from "../components/ProductItem";
 
 /**
  * Represents the state of the Homepage component.
@@ -92,11 +93,7 @@ export default function Homepage() {
             <Row>
                 {state.products.map((product) => (
                 <Col key={product.slug} sm={6} md={4} lg={3}>
-                    <Link to={'/product/' + product.slug}>
-                        <img src={product.image} alt={product.name} className='product-imgage' />
-                        <h2>{product.name}</h2>
-                        <p>{product.price}</p>
-                    </Link>
+                   <ProductItem product={product}></ProductItem>
 
                 </Col>
                 ))}
