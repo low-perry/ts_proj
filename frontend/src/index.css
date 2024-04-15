@@ -13,3 +13,6 @@
 .rating span {
   color: gold;
 }
+img.large {
+  max-width: 100%;
+}

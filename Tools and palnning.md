@@ -52,7 +52,7 @@ type Action = {type: 'FETCH_REQUEST'}
 
 Create [utils.ts](frontend/src/utils.ts) and define `getError` function.
 
-Decided to use [React Query](https://tanstack.com/query/latest/docs/framework/react/overview) instead of axios, so it's imperative to remove all axios code used on [main.tsx](frontend/src/main.tsx) and put the code in the [apiClient.ts](frontend/src/apiClient.ts) file.
+Decided to use [React Query](https://tanstack.com/query/latest/docs/framework/react/overview) ,remove all axios code used on [main.tsx](frontend/src/main.tsx) and put the code in the [apiClient.ts](frontend/src/apiClient.ts) file.
 
 
 
@@ -89,3 +89,7 @@ Decided to use [React Query](https://tanstack.com/query/latest/docs/framework/re
         ```
 6. Create [src](backend/src) directory with the [index](backend/src/index.ts) typescript file
 7. Install cors `npm i cors` and the types of cors `npm i --save-dev @types/cors`
+
+## Api endpoints
+1. /api/products
+2. /api/products/:slug
