@@ -1,6 +1,9 @@
 import { useContext, useEffect } from 'react'
 import { Badge, Button, Container, Nav, Navbar} from 'react-bootstrap'
 import { Link, Outlet } from 'react-router-dom'
+import { LinkContainer } from 'react-router-bootstrap';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 import { Store } from './Store';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
@@ -18,10 +21,13 @@ function App() {
   }
   return (
     <div className='d-flex flex-column vh-100'>
+      <ToastContainer position="bottom-left" limit={1} autoClose={1000} />
       <header>
         <Navbar bg='dark' variant='dark' expand='lg'>
           <Container>
-            <Navbar.Brand>Typezone</Navbar.Brand>  
+            <LinkContainer to='/'>
+              <Navbar.Brand>Typezone</Navbar.Brand>
+            </LinkContainer>  
           </Container>
           <Nav>
             <Button variant={mode} onClick={switchModeHandler}>
@@ -48,6 +54,7 @@ function App() {
          <Outlet></Outlet>
         </Container>
       </main>
+      
       <footer>
         All rights reserved
       </footer>

@@ -21,6 +21,10 @@ Using [React helmet](https://www.npmjs.com/package/react-helmet-async) for page 
 Using [React Query](https://tanstack.com/query/latest/docs/framework/react/overview) to work with server state
 `npm i @tanstack/react-query @tanstack/react-query-devtools`
 
+Using [React toastify](https://www.npmjs.com/package/react-toastify) for alerts `npm i react-toastify`
+
+Using [react router bootstrap](https://www.npmjs.com/package/react-router-bootstrap) `npm install -S react-router-bootstrap`
+
 
 
 
