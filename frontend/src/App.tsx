@@ -1,12 +1,12 @@
 import { useContext, useEffect } from 'react'
-import { Button, Container, Nav, Navbar} from 'react-bootstrap'
-import { Outlet } from 'react-router-dom'
+import { Badge, Button, Container, Nav, Navbar} from 'react-bootstrap'
+import { Link, Outlet } from 'react-router-dom'
 import { Store } from './Store';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
-  const {state: {mode}, dispatch} = useContext(Store);
+  const {state: {mode, cart}, dispatch} = useContext(Store);
 
   useEffect(() => {
     document.body.setAttribute('data-bs-theme', mode);
@@ -27,10 +27,15 @@ function App() {
             <Button variant={mode} onClick={switchModeHandler}>
               <FontAwesomeIcon icon={mode === 'dark' ? faMoon : faSun} />
             </Button>
-            <a href="/cart" className='nav-link'>
+            <Link to="/cart" className='nav-link'>
               <i className='fas fa-shopping-cart'></i>
               Cart
-            </a>
+              {cart.cartItems.length > 0 && (
+                <Badge pill bg="danger">
+                  {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                </Badge>
+              )}
+            </Link>
             <a href="/signin" className='nav-link'>
               <i className='fas fa-user'></i>
               Sign In

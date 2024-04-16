@@ -61,6 +61,7 @@ Decided to use [React Query](https://tanstack.com/query/latest/docs/framework/re
 ### Types
 - [Product](frontend/src/types/Product.ts) represents a product entity.
 - [APIError](frontend/src/types/APIError.ts) represents the API error response
+- [Cart](frontend/src/types/Cart.ts) represents the Cart
 
 ### Components
 - [LoadingBox](frontend/src/components/LoadingBox.tsx) is a loading box used while data is being fetched

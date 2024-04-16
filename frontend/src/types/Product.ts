@@ -1,4 +1,5 @@
 export type Product = {
+    _id: string
     name: string,
     // used for seo friendly url
     slug: string,
