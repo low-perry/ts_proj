@@ -1,6 +1,22 @@
 import cors from 'cors';
-import express, { Request, Response } from 'express';
-import { initialProducts } from './data';
+import dotenv from 'dotenv'
+import express from 'express';
+import mongoose from 'mongoose';
+import { productRouter } from './routers/productRouter';
+import { seedRouter } from './routers/seedRoter';
+
+dotenv.config();
+
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/typezonedb';
+mongoose.set('strictQuery', true);
+mongoose
+  .connect(MONGODB_URI)
+  .then(() => {
+    console.log('connected to mongodb')
+  })
+  .catch(() => {
+    console.log('error mongodb')
+  })
 
 const app = express();
 
@@ -15,25 +31,9 @@ app.use(
     })
 );
 
-/**
- * GET endpoint to retrieve the list of products.
- * @param req - The request object.
- * @param res - The response object.
- * @returns The list of initial products as a JSON response.
- */
-app.get('/api/products', (req: Request, res: Response) => {
-    res.json(initialProducts);
-});
+app.use('/api/products', productRouter);
+app.use('/api/seed', seedRouter);
 
-/**
- * GET endpoint to retrieve a specific product by its slug.
- * @param req - The request object.
- * @param res - The response object.
- * @returns The product with the matching slug as a JSON response.
- */
-app.get('/api/products/:slug', (req: Request, res: Response) => {
-    res.json(initialProducts.find((x) => x.slug === req.params.slug))
-})
 
 const PORT = 4000;
 

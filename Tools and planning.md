@@ -90,6 +90,15 @@ Decided to use [React Query](https://tanstack.com/query/latest/docs/framework/re
 6. Create [src](backend/src) directory with the [index](backend/src/index.ts) typescript file
 7. Install cors `npm i cors` and the types of cors `npm i --save-dev @types/cors`
 
+8. Create mongodb database
+ 1. `npm install dotenv mongoose @typegoose/typegoose`
+ 2. place uri in .env
+
+9. Create [Product model](backend\src\models\productModel.ts)
+
+10. Install `npm i express-async-handler` to simplify express error handeling.
+11. Create [Product router](backend/src/routers/productRouter.ts)
+
 ## Api endpoints
 1. /api/products
 2. /api/products/:slug
