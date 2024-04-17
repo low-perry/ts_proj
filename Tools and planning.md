@@ -104,6 +104,11 @@ Decided to use [React Query](https://tanstack.com/query/latest/docs/framework/re
 10. Install `npm i express-async-handler` to simplify express error handeling.
 11. Create [Product router](backend/src/routers/productRouter.ts)
 
+12. Create [User model](backend/src/models/userModel.ts)
+  use [bcrypt](https://www.npmjs.com/package/bcryptjs) for the passwords `npm i bscryptjs`
+
+13. Using [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) for authentication `npm i jsonwebtoken`
+
 ## Api endpoints
 1. /api/products
 2. /api/products/:slug
