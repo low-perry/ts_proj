@@ -79,6 +79,7 @@ Decided to use [React Query](https://tanstack.com/query/latest/docs/framework/re
 - [Homepage](frontend/src/pages/Homfrontendepage.tsx) , is the homepage of the app
 - [ProductPage](frontend/src/pages/ProductPage.tsx), is the page for the individual products
 - [SigninPage](frontend/src/pages/SigninPage.tsx), is the signin page
+- [SignupPage](frontend/src/pages/SignupPage.tsx), is the signup page
 
 ### Hooks
 - [productHooks](frontend/src/hooks/productHooks.ts) fetches products from the server
