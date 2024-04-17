@@ -66,6 +66,7 @@ Decided to use [React Query](https://tanstack.com/query/latest/docs/framework/re
 - [Product](frontend/src/types/Product.ts) represents a product entity.
 - [APIError](frontend/src/types/APIError.ts) represents the API error response
 - [Cart](frontend/src/types/Cart.ts) represents the Cart
+- [UserInfo](frontend/src/types/UserInfo.ts) represents a user and its info.
 
 ### Components
 - [LoadingBox](frontend/src/components/LoadingBox.tsx) is a loading box used while data is being fetched
@@ -77,9 +78,12 @@ Decided to use [React Query](https://tanstack.com/query/latest/docs/framework/re
 ### Pages
 - [Homepage](frontend/src/pages/Homfrontendepage.tsx) , is the homepage of the app
 - [ProductPage](frontend/src/pages/ProductPage.tsx), is the page for the individual products
+- [SigninPage](frontend/src/pages/SigninPage.tsx), is the signin page
 
 ### Hooks
--[productHooks](frontend/src/hooks/productHooks.ts) fetches products from the server
+- [productHooks](frontend/src/hooks/productHooks.ts) fetches products from the server
+- [userHooks](frontend/src/hooks/userHooks.ts)
+
 
 # Backend
  1. Created directory [backend](backend).
@@ -112,3 +116,4 @@ Decided to use [React Query](https://tanstack.com/query/latest/docs/framework/re
 ## Api endpoints
 1. /api/products
 2. /api/products/:slug
+3. /api/users/signin
